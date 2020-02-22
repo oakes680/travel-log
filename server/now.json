@@ -1,0 +1,27 @@
+{
+  "version": 2,
+  "name": "travel-log",
+  "builds": [
+    {
+      "src": "src/index.js",
+      "use": "@now/node-server"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/.*",
+      "dest": "src/index.js"
+    }
+  ],
+  "alias": [
+    "travel-loggg"
+  ],
+  
+  "env": {
+    "NODE_ENV": "production", 
+    "PORT": "1337",
+    "DATABASE_URL": "@travel-log-dbb",
+    "CORS_ORIGIN": "https://travelblog.now.sh",
+    "API_KEY": "@travel-log-api-key"
+  }
+}
